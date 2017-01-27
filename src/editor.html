@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col m3">
+    <ul>
+      <li v-for="post in posts">
+        <span>{{post.title}}</span>
+        <span><a href="#" @click.prevent="edit(post)">edit</a></span>
+      </li>
+    </ul>
+  </div>
+  <form @submit.prevent="submitted" class="col m9">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea :id="messageId" class="materialize-textarea"></textarea>
+      </div>
+      <div class="input-field col s12">
+        <input v-model="title" id="title" type="text">
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field col s12">
+        <input v-model="uri" id="uri" type="text">
+        <label for="uri">URI</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="checkbox" id="published" v-model="published">
+        <label for="published">Publish</label>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn waves-effect waves-light" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

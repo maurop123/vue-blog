@@ -1,0 +1,49 @@
+{
+  "name": "simple-vue-starter",
+  "version": "1.0.0",
+  "description": "vue start app framework for blogs and portfolios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html] src/index.js -o public/bundle.js",
+    "watch:server": "ws -d public/ -s index.html",
+    "build:prod": "browserify -t [babelify ext .js] -t [stringify ext .html] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
+    "local": "npm-run-all --parallel watch:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maurop123/maurop123-portfolio.git"
+  },
+  "keywords": [
+    "vue",
+    "app",
+    "framework",
+    "bootstrap",
+    "blog",
+    "portfolio"
+  ],
+  "author": "maurop123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maurop123/maurop123-portfolio/issues"
+  },
+  "homepage": "https://github.com/maurop123/maurop123-portfolio#readme",
+  "dependencies": {
+    "firebase": "^3.6.4",
+    "vuex-router-sync": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "browserify-hmr": "^0.3.5",
+    "http-server": "^0.9.0",
+    "local-web-server": "^1.2.6",
+    "npm-run-all": "^4.0.1",
+    "stringify": "^5.1.0",
+    "uglifyify": "^3.0.4",
+    "watchify": "^3.7.0"
+  }
+}
