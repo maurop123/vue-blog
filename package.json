@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html .json] src/index.js -o public/bundle.js",
     "watch:server": "ws -d public/ -s index.html",
-    "build:local:config": "cp sample.config.json src/config.json",
+    "build:local:config": "if [ ! -e src/config.json ]; then cp sample.config.json src/config.json; fi",
     "build:local": "npm-run-all build:local:*",
     "build:prod": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
     "local": "npm-run-all --parallel watch:*"
