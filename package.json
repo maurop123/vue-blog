@@ -1,20 +1,20 @@
 {
-  "name": "simple-vue-starter",
+  "name": "vue-blog",
   "version": "1.0.0",
-  "description": "vue start app framework for blogs and portfolios",
+  "description": "a blog made with vue",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html .json] src/index.js -o public/bundle.js",
     "watch:server": "ws -d public/ -s index.html",
-    "build:local:config": "if [ ! -e src/config.json ]; then cp sample.config.json src/config.json; fi",
-    "build:local": "npm-run-all build:local:*",
-    "build:prod": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
+    "postinstall:config": "if [ ! -e src/config.json ]; then cp sample.config.json src/config.json; fi",
+    "postinstall": "npm-run-all postinstall:*",
+    "build": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
     "local": "npm-run-all --parallel watch:*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maurop123/maurop123-portfolio.git"
+    "url": "git+https://github.com/maurop123/vue-blog.git"
   },
   "keywords": [
     "vue",
@@ -27,9 +27,9 @@
   "author": "maurop123",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maurop123/maurop123-portfolio/issues"
+    "url": "https://github.com/maurop123/vue-blog/issues"
   },
-  "homepage": "https://github.com/maurop123/maurop123-portfolio#readme",
+  "homepage": "https://github.com/maurop123/vue-blog#readme",
   "dependencies": {
     "firebase": "^3.6.4",
     "vuex-router-sync": "^4.0.2"
