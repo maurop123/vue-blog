@@ -32,6 +32,7 @@
   "homepage": "https://github.com/maurop123/vue-blog#readme",
   "dependencies": {
     "firebase": "^3.6.4",
+    "rx": "^4.1.0",
     "vuex-router-sync": "^4.0.2"
   },
   "devDependencies": {

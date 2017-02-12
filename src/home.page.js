@@ -29,11 +29,9 @@ export default {
   },
   methods: {
     next() {
-      console.log('next', this.nextPost.uri)
       this.$router.push(`/blog/${ this.nextPost.uri }`)
     },
     prev() {
-      console.log('prev', this.prevPost.uri)
       this.$router.push(`/blog/${ this.prevPost.uri }`)
     },
     convertMarkdown(text) {

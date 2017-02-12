@@ -1,3 +1,3 @@
 export default {
-  template: '<editor></editor>'
+  template: '<editor></editor>',
 }
