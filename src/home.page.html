@@ -17,9 +17,9 @@
             <ul>
                 <li v-for="post in posts">
                     <div class="section">
-                      <h5>{{post.title}}</h5>
-                      <p>{{post.message.slice(0,400)}}</p>
-                      <a href="post.postByUri">Read More...</a>
+                        <h5>{{post.title}}</h5>
+                        <p>{{post.message.slice(0,400)}}</p>
+                        <a :href="blogLink(post.uri)">Read More</a>
                     </div>
                     <div class="divider"></div>
                 </li>
