@@ -34,9 +34,8 @@ export default {
     prev() {
       this.$router.push(`/blog/${ this.prevPost.uri }`)
     },
-    convertMarkdown(text) {
-      const converter = new showdown.Converter()
-      return converter.makeHtml(text)
+    goToPost(uri) {
+      this.$router.push(`/blog/${uri}`)
     }
   },
 }
