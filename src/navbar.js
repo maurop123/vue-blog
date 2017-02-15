@@ -1,7 +1,7 @@
 const template = `
 <nav>
   <div class="nav-wrapper white">
-    <a href="/" class="brand-logo grey-text text-darken-3">Marketer Camp</a>
+    <router-link to="/" class="brand-logo grey-text text-darken-3">Marketer Camp</router-link>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li>
         <router-link to="/" class="grey-text text-darken-3">Home</router-link>

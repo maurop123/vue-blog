@@ -36,8 +36,8 @@ export default {
       console.log('prev', this.prevPost.uri)
       this.$router.push(`/blog/${ this.prevPost.uri }`)
     },
-    blogLink(uri) {
-      return `/blog/${uri}`
+    goToPost(uri) {
+      this.$router.push(`/blog/${uri}`)
     }
   },
 }

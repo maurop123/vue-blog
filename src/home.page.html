@@ -1,40 +1,16 @@
 <div class="container">
-    <!-- <div class="row"> -->
-    <!--   <h3 style="font-weight:300;color:lightgrey"> -->
-    <!--     <i class="fa fa-square-o" aria-hidden="true"></i>MPTY Square -->
-    <!--   </h3> -->
-    <!-- </div> -->
     <div class="row">
-        <!-- <div v-if="post" class="col s12">
-      <div class="col s12 center-align">
-        <h1>{{post.title}}</h1>
-      </div>
-      <div class="col s12">
-        <div :id="postElmId" v-html="convertMarkdown(post.message)"></div>
-      </div>
-    </div> -->
         <div class="col s12">
             <ul>
                 <li v-for="post in posts">
                     <div class="section">
                         <h5>{{post.title}}</h5>
                         <p>{{post.message.slice(0,400)}}</p>
-                        <a :href="blogLink(post.uri)">Read More</a>
+                        <a @click.prevent="goToPost(post.uri)" href="#">Read More</a>
                     </div>
                     <div class="divider"></div>
                 </li>
             </ul>
         </div>
-        <!-- <div v-else>
-      <h3>loading...</h3>
-    </div> -->
-    </div>
-    <div class="row">
-        <a v-if="prevPost" class="btn white black-text" @click.prevent="prev" href="#">
-      Prev
-    </a>
-        <a v-if="nextPost" class="btn white black-text right" @click.prevent="next" href="#">
-      Next
-    </a>
     </div>
 </div>
