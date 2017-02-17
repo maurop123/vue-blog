@@ -2,7 +2,7 @@
 
 - npm i
 - npm run local
-- Goto http://localhost:8000
+- Go to http://localhost:8000
 
 ## Firebase setup
 
