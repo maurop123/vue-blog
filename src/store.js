@@ -1,6 +1,9 @@
+import Vuex from 'vuex'
 import {Observable} from 'rx'
 
-export default function({db, auth}) {
+export default function({Vue, db, auth}) {
+  Vue.use(Vuex)
+
   db.posts = db.ref('/posts')
 
   const Store ={

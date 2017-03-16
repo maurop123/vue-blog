@@ -1,6 +1,6 @@
 src/config.json
-bundle.css
-bundle.js
+main.css
+app.js
 .htaccess
 npm-debug.log
 bower_components/

@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html .json] src/index.js -o public/bundle.js",
+    "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html .json] src/index.js -o public/app.js",
     "watch:server": "ws -d public/ -s index.html",
+    "watch:sass": "npm run sass && node-sass -w styles/ -o public/",
+    "sass": "node-sass styles/main.scss -o public/",
     "postinstall:config": "if [ ! -e src/config.json ]; then cp sample.config.json src/config.json; fi",
     "postinstall": "npm-run-all postinstall:*",
-    "build": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
+    "build:js": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/app.js",
+    "build:css": "node-sass styles/main.scss -o dist/",
+    "build": "npm-run-all --parallel build:*",
     "local": "npm-run-all --parallel watch:*"
+  },
+  "browser": {
+    "vue": "vue/dist/vue"
   },
   "repository": {
     "type": "git",
@@ -32,7 +39,12 @@
   "homepage": "https://github.com/maurop123/vue-blog#readme",
   "dependencies": {
     "firebase": "^3.6.4",
+    "lodash": "^4.17.4",
     "rx": "^4.1.0",
+    "vue": "^2.2.4",
+    "vue-custom-element": "^1.0.13",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1",
     "vuex-router-sync": "^4.0.2"
   },
   "devDependencies": {
@@ -44,6 +56,7 @@
     "browserify-hmr": "^0.3.5",
     "http-server": "^0.9.0",
     "local-web-server": "^1.2.6",
+    "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.1",
     "stringify": "^5.1.0",
     "uglifyify": "^3.0.4",
