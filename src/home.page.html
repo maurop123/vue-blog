@@ -1,12 +1,15 @@
-<div>
+<div id="home" class="grid">
   <header v-if="blog.header">
     <h1>{{blog.header.text}}</h1>
   </header>
-  <main>
-  <article v-for="post in posts">
-    <h3>{{post.title}}</h3>
-    <p>{{post.message.slice(0,400)}}</p>
-    <a @click.prevent="goToPost(post.uri)" href="#">Read More</a>
-  </article>
+  <main class="container">
+    <div v-for="(post, index) in posts">
+      <article class="post">
+        <h3>{{post.title}}</h3>
+        <p>{{post.message.slice(0,400)}}</p>
+        <a @click.prevent="goToPost(post.uri)" href="#">Read More</a>
+      </article>
+      <hr v-if="index < posts.length-1">
+    </div>
   </main>
 </div>

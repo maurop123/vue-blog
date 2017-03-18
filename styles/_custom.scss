@@ -1,0 +1,24 @@
+// if you don't know where a style should go, put it here.
+// if there are a group of styles that are conceptually cohesive, you can put them in their own file.
+
+.grid {
+  @include grid-container;
+}
+
+.container {
+  max-width: 900px;
+}
+
+#home {
+  .post {
+    padding: 45px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.right {
+  float:right;
+}

@@ -9,6 +9,7 @@
     "watch:server": "ws -d public/ -s index.html",
     "watch:sass": "npm run sass && node-sass -w styles/ -o public/",
     "sass": "node-sass styles/main.scss -o public/",
+    "postinstall:normalize": "cp node_modules/normalize.css/normalize.css styles/",
     "postinstall:config": "if [ ! -e src/config.json ]; then cp sample.config.json src/config.json; fi",
     "postinstall": "npm-run-all postinstall:*",
     "build:js": "browserify -t [babelify ext .js] -t [stringify ext .html .json] -t [uglifyify -x .js] src/index.js -o dist/app.js",
@@ -40,6 +41,7 @@
   "dependencies": {
     "firebase": "^3.6.4",
     "lodash": "^4.17.4",
+    "normalize.css": "^5.0.0",
     "rx": "^4.1.0",
     "vue": "^2.2.4",
     "vue-custom-element": "^1.0.13",

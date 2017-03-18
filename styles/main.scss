@@ -1,11 +1,10 @@
-.full-width {
-  width: 100%;
-}
+// this file is just for imports. no styles should be here
 
-.hidden {
-  display: none;
-}
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
 
-.right {
-  float:right;
-}
+@import "material";
+@import "custom";
+
