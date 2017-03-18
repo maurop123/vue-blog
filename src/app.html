@@ -1,0 +1,11 @@
+<div id="blog-app">
+  <nav>
+    <div class="nav-wrapper white">
+      <router-link to="/" class="brand-logo grey-text text-darken-3">{{blog.logoLabel}}</router-link>
+    </div>
+  </nav>
+  <router-view :blog="blog" />
+  <footer>
+    <h3>This is a footer</h3>
+  </footer>
+</div>

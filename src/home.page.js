@@ -2,6 +2,7 @@ import template from './home.page.html'
 
 export default {
   template: template,
+  props: ['blog'],
   data() {
     return {
       postElmId: 'post'
