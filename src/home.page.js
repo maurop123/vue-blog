@@ -1,15 +1,16 @@
 import template from './home.page.html'
+import _ from 'lodash'
 
 export default {
   template: template,
   data() {
     return {
-      postElmId: 'post'
+      postElmId: 'post',
     }
   },
   computed: {
     posts() {
-      return this.$store.state.posts
+      return _.reverse(this.$store.state.posts)
     },
     uri() {
       return this.$store.state.route.params.uri
