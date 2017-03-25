@@ -8,3 +8,5 @@ node_modules/
 *.swp
 tmp/
 dev/
+public/images
+!public/images/misty_lake.jpg

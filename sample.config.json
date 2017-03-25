@@ -3,5 +3,12 @@
     "apiKey": "AIzaSyCZ75-IkmI4pZ8WAG52rLNCq2YU8MuoHBA",
     "authDomain": "postmaker-82524.firebaseapp.com",
     "databaseURL": "https://postmaker-82524.firebaseio.com"
+  },
+  "blog": {
+    "logoLabel": "My Blog",
+    "header": {
+      "text": "Esto es un Header",
+      "background": "images/misty_lake.jpg"
+    }
   }
 }
