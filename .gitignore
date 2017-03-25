@@ -13,3 +13,4 @@ public/images
 database.rules.json
 firebase.json
 .firebaserc
+public/footer.scripts.js
