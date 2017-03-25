@@ -15,6 +15,16 @@
   }
 }
 
+nav {
+  height: 50px;
+  border-bottom: 1px lightgrey solid;
+}
+
+header {
+  height: 250px;
+  background-position: bottom;
+}
+
 .hidden {
   display: none;
 }

@@ -9,6 +9,9 @@ export default {
     }
   },
   computed: {
+    headerBackground() {
+      return `background-image:url('${this.blog.header.background}')`;
+    },
     posts() {
       return this.$store.state.posts
     },

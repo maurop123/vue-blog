@@ -1,5 +1,5 @@
 <div id="home" class="grid">
-  <header v-if="blog.header">
+  <header v-if="blog.header" :style="headerBackground">
     <h1>{{blog.header.text}}</h1>
   </header>
   <main class="container">
