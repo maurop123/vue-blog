@@ -26,6 +26,8 @@ import {sync} from 'vuex-router-sync'
 sync(store, router)
 
 import App from './app.js'
+
+
 new Vue(Object.assign(
   {
     el:'#app',

@@ -8,6 +8,7 @@ export default { template,
       title: '',
       uri: '',
       messageId: '',
+      publishDate: '',
       published: false
     }
   },
@@ -31,10 +32,13 @@ export default { template,
     edit(post) {
       this.post = post
     },
+    timeStamp() {
+      return this.publishDate = Date();
+    },
     submitted(evt) {
       const message = this.markdownEditor.value()
-      const {id, title, uri, published} = this
-      this.$store.dispatch('setPost',{id, title, message, uri, published})
+      const {id, title, uri, published, publishDate} = this
+      this.$store.dispatch('setPost',{id, title, message, uri, published, publishDate})
     }
   },
   mounted() {

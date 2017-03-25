@@ -1,19 +1,47 @@
-<div class="row">
-  <form @submit.prevent="login" class="col s12">
+<div class="container-fluid">
     <div class="row">
-      <div class="input-field col s12">
-        <input v-model="email" id="email" type="email">
-        <label for="email">Email</label>
-      </div>
+        <div class="col l6 card background "></div>
+        <!-- /.col l6 .card .background -->
+        <div class="col l6">
+            <div class="row">
+                <div class="brand col s12">
+                    <h3 class="center">Login</h3>
+                </div>
+                <!-- /.brand .col s12-->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div id="login" class="row">
+                    <form @submit.prevent="login" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input v-model="email" id="email" type="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <!-- /.input-field col s12 -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input v-model="password" id="password" type="password">
+                                <label for="password">Password</label>
+                            </div>
+                            <!-- /.input-field col s12 -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row">
+                            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+                        </div>
+                        <!-- /.row -->
+                    </form>
+                    <!-- /@login col s12 -->
+                </div>
+                <!-- /#login .row -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.col l6 -->
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input v-model="password" id="password" type="password">
-        <label for="password">Password</label>
-      </div>
-    </div>
-    <div class="row">
-      <button class="btn waves-effect waves-light" type="submit">Submit</button>
-    </div>
-  </form>
+    <!-- /.row -->
 </div>
+<!-- /.container-fluid -->

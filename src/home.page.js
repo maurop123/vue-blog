@@ -1,11 +1,12 @@
 import template from './home.page.html'
+import _ from 'lodash'
 
 export default {
   template: template,
   props: ['blog'],
   data() {
     return {
-      postElmId: 'post'
+      postElmId: 'post',
     }
   },
   computed: {
@@ -13,7 +14,7 @@ export default {
       return `background-image:url('${this.blog.header.background}')`;
     },
     posts() {
-      return this.$store.state.posts
+      return _.reverse(this.$store.state.posts)
     },
     uri() {
       return this.$store.state.route.params.uri
